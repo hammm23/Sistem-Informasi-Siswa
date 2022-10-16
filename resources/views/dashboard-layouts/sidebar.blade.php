@@ -13,7 +13,7 @@
                         </li>
               <li class="menu-header">Menu</li>
 
-              <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
+              <li class="{{ Request::is('students*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('students.index') }}"><i class="fas fa-user"></i> <span>Data Diri Siswa</span></a></li>
 
               <li class="nav-item dropdown">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Ini Fitur</span></a>
