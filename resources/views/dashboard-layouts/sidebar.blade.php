@@ -1,10 +1,10 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html">Stisla</a>
+            <a href="{{ url('dashboard') }}"><img src="{{ asset('assets/img/logo_smk.png') }}" alt="logo-smk2mgl" width="50" class="img-fluid"></a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">St</a>
+            <a href="{{ url('dashboard') }}"><img src="{{ asset('assets/img/logo_smk.png') }}" alt="logo-smk2mgl" width="50" class="img-fluid"></a>
           </div>
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>

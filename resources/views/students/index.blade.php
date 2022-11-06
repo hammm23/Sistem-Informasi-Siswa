@@ -8,23 +8,31 @@ Data Diri Siswa
 @endsection
 @section('content')
 <section class="section">
-
-          <div class="section-header">
-            <h1>Data Peserta Didik</h1>
+        <div class="section-header">
+            <h1>Data Diri Siswa</h1>
             <div class="section-header-button">
-                <a href="{{ route('students.create') }}" class="btn btn-primary">Tambah Data</a>
+                <a href="" class="btn btn-primary">Tambah Data</a>
             </div>
             <div class="section-header-breadcrumb">
                 <div class="breadcrumb-item active"><a href="{{ url('/dashboard') }}">Dashboard</a></div>
-                <div class="breadcrumb-item">Daftar Siswa</div>
+                <div class="breadcrumb-item">Tabel Siswa</div>
             </div>
         </div>
-
-         <div class="section-body">
+        <div class="section-body">
             <h2 class="section-title">Keterangan Tentang Diri Peserta Didik</h2>
             <p class="section-lead">
-                Anda dapat mengelola semua data siswa di sini, seperti tambah dan edit.
+                Anda dapat mengelola semua data siswa di sini, seperti tambah, edit, dan hapus.
             </p>
+
+            @if (Session::has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <strong>Success!</strong> {{ Session('success') }}.
+            </div>
+            @endif
 
             <div class="row mt-4">
               <div class="col-12">
@@ -39,45 +47,31 @@ Data Diri Siswa
                       <thead>
                         <tr>  
                             <th>No.</th>
-                            <th>Nama Peserta Didik (Lengkap)</th>
-                            <th>Nomor Induk Siswa</th>
-                            <th>NISN</th>
-                            <th>Tempat Lahir</th>
-                            <th>Tanggal Lahir</th>
-                            <th>Jenis Kelamin</th>
-                            <th>Agama</th>
-                            <th>Alamat Peserta Didik</th>
-                            <th>Sekolah Asal</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>Nama Bank</th>
+                            <th>Jabatan</th>
                             <th>Aksi</th>
                         </tr>
                       </thead>
-                      @foreach ( $students as $student)
                         <tr>
-                          <td>{{ $loop->iteration }}</td>
-                          <td>{{ $student->nama}}</td>
-                          <td>{{ $student->nis}}</td>
-                          <td>{{ $student->nisn}}</td>
-                          <td>{{ $student->tempat_lahir}}</td>
-                          <td>{{ $student->tanggal_lahir}}</td>
-                          <td>{{ $student->jenis_kelamin}}</td>
-                          <td>{{ $student->agama}}</td>
-                          <td>{{ $student->alamat}}</td>
-                          <td>{{ $student->sekolah_asal}}</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
                           <td>
-                            
+
                           </td>
+
                         </tr>
-                      @endforeach
                     </table>
                     </div>
                 </div>
               </div>
             </div>
           </div>
-
-        </div>
-
-</section>
+      </section>
 @endsection
 @section('script-libraies')
 <script src="{{ asset('assets/js/datatables/media/js/jquery.dataTables.min.js') }}"></script>
