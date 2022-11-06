@@ -48,22 +48,31 @@ Data Diri Siswa
                         <tr>  
                             <th>No.</th>
                             <th>Nama</th>
-                            <th>Email</th>
-                            <th>Nama Bank</th>
-                            <th>Jabatan</th>
+                            <th>NIS</th>
+                            <th>NISN</th>
+                            <th>Tempat, Tanggal Lahir</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Agama</th>
+                            <th>Alamat</th>
+                            <th>Nomor Telepon Rumah</th>
                             <th>Aksi</th>
                         </tr>
                       </thead>
+                      @foreach ($students as $student)
                         <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
+                          <td>{{ $loop->iteration }}</td>
+                          <td>{{ $student->nama }}</td>
+                          <td>{{ $student->nis }}</td>
+                          <td>{{ $student->nisn }}</td>
+                          <td>{{ $student->tempat_lahir }}, {{ $student->tanggal_lahir }}</td>
+                          <td>{{ $student->jenis_kelamin }}</td>
+                          <td>{{ $student->agama }}</td>
+                          <td>{{ $student->alamat }}</td>
+                          <td>{{ $student->no_telp_rumah }}</td>
                           <td>
 
                           </td>
-
+                      @endforeach
                         </tr>
                     </table>
                     </div>
